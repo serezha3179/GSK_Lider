@@ -2,6 +2,30 @@
 <html lang="en">
   @@include('html/head.html',{"title":"ЖСК Лидер"})
   <body>
+<div class="page">
+    @@include('html/header.html')
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapper">
+            <h1 class="hero__title">
+              Строим, ремонтируем и обслуживаем 
+              <span>жилые многоквартирные дома</span>
+            </h1>
+            <button class="hero__button">
+              <svg class="hero__button-svg">
+                <use xlink:href="@img/sprite.svg#button" class="buttonColor"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="hero__image">
+         <img src="@img/hero/hero-image.jpg" alt="building" class="hero__img">
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html')
+</div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

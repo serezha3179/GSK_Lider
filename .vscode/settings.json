@@ -1,0 +1,8 @@
+{
+  "ecsstractor_port.brackets_newline_after": false,
+  "ecsstractor_port.brackets": false,
+  "ecsstractor_port.bem_nesting": true,
+  "ecsstractor_port.add_comment": false,
+  "CSSNavigation.activeCSSFileExtensions": ["css", "scss", "less", "sass"],
+  "CSSNavigation.searchAcrossWorkspaceFolders": false
+}
