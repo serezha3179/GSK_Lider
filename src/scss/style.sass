@@ -1,4 +1,197 @@
 @import reset
-@import mainstyles
+@import variables
 @import header
 @import footer
+
+body 
+    position: relative
+    font-family: $ptsans
+    font-size: 18px
+    font-weight: 400
+    line-height: 1.305
+    color: $black
+    &.lock
+        overflow: hidden
+
+.container 
+    max-width: 1290px
+    margin: 0 auto
+    padding: 0 50px
+    @media(max-width: $Small)
+        padding: 0 30px
+
+.title
+    font-size: $ptsans
+    font-weight: 400
+    line-height: 1.305
+    color: $black
+
+.hero
+    position: relative
+    &__wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-bottom: 20px
+
+    @media(max-width: $Medium-s)  
+        &__wrapper
+            position: absolute
+            top: 50% 
+            left: 50%
+            transform: translate(-50%,-50%) 
+            z-index: 1
+            flex-direction: column
+            max-width: 50%
+            width: 100%
+            height: 100%
+            padding: 0 
+            &::after
+              content: ""
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%,-50%) skewX(20deg)
+              max-width: 100%
+              width: 100%
+              height: 100%
+              background: rgba(156, 46, 41, 0.7)
+
+    &__title
+        font-family: $montserat
+        font-size: 35px
+        font-weight: 900
+        line-height: 1.21
+        max-width: 780px
+        padding-right: 20px
+        & span
+            color: $red
+    @media(max-width: $Medium-l)
+        &__title
+            font-size: 30px
+            line-height: 1.219
+
+    @media(max-width: $Medium-s)
+        &__title
+            font-size: 3vw
+            &, span
+                color: $white
+                z-index: 1
+
+    &__button
+        max-width: 170px
+        width: 100%
+        margin-right: 0
+        margin-left: auto
+        z-index: 1
+        border: none
+        background: none
+        cursor: pointer
+        outline: none
+
+    @media(max-width: $Medium-s)
+        &__button
+            width: 50%
+            height: 50%
+    &__button-svg 
+        width: 100%
+        height: 100%
+        & use
+            fill: $red    
+            stroke: $red   
+            stroke-width: 2px
+            color: $black 
+
+    @media(max-width: $Medium-s)
+        &__button-svg
+            & use
+               fill: $white        //в svg stroke="none" у слова и стрелки , у круга fill="none"
+               stroke: $white      // use class="buttonColor"
+               stroke-width: 2px
+               color: $white 
+        
+.hero__img
+    // min-height: 606px
+    // @media(max-width: 992px)
+        // min-width: 487px
+    // max-height: 606px
+    // height: 100%
+
+.tasks
+    padding: 118px 0 56px
+    @media(max-width: $Medium-l)
+        padding: 70px 0
+        position: relative
+    @media(max-width: $Medium-s)
+        padding: 40px 0
+    @media(max-width: $Small-l)
+        padding: 70px 0
+    &__title
+        font-family: $ptsans
+        font-size: 40px
+        font-weight: 700
+        line-height: 1.305
+        color: $black
+        max-width: 805px
+        margin-bottom: 84px
+        span
+            color: $red
+        @media(max-width: $Medium-l)
+            display: inline-block
+            position: absolute
+            font-size: 30px
+            max-width: 600px
+            margin-top: 60px
+        @media(max-width: $Medium)
+            position: static
+            margin-top: 0  
+        @media(max-width: $Medium-s)  
+            font-size: 25px
+            margin-bottom: 60px
+        @media(max-width: $Small-l)  
+            font-size: 20px
+            margin-bottom: 40px
+    &__cards
+        display: flex
+        flex-direction: row
+        @media(max-width: $Medium-l)
+            flex-wrap: wrap-reverse
+            justify-content: space-between
+        @media(max-width: $Medium)
+            flex-wrap: wrap
+    &__card
+        width: 30%
+        &:nth-child(4)
+            margin-right: 0
+            margin-left: auto
+            @media(max-width: $Medium)
+                margin: 0
+        @media(max-width: $Small-l)
+            width: 50%
+        @media(max-width: $Small-l)
+            padding-right: 10px
+            &:nth-child(1)
+                order: 0
+            &:nth-child(2)
+                order: 1
+            &:nth-child(3)
+                order: 3
+            &:nth-child(4)
+                order: 2 
+    &__card-image
+        margin-bottom: 13px
+        @media(max-width: $Small-l) 
+            max-width: 100px
+
+    &__card-text
+        font-family: $ptsans
+        font-size: 16px
+        font-weight: 400
+        line-height: 1.32
+        color: $gray
+        max-width: 227px
+        @media(max-width: $Medium-l)
+            margin-bottom: 60px
+        @media(max-width: $Small-l)    
+            font-size: 14px
+            margin-bottom: 20px
