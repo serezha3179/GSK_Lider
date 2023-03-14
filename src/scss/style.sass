@@ -29,7 +29,7 @@ body
     color: $black
 
     @media screen and (max-width: $Medium-l)
-        font-size: 30
+        font-size: 30px
 
     @media screen and (max-width: $Medium-s)
         font-size: 25px
@@ -366,4 +366,88 @@ body
         @media screen and (max-width: $Small-l)
             max-width: 150px
 /* end section services */
+
+/* start section houses */
+.houses
+    padding: 80px 0
+    &__itmes
+        // display: flex
+        display: grid
+        grid-template-rows: repeat(5, auto)
+        grid-template-columns: repeat(4, 1fr)
+
+        @media screen and (max-width: 667px)
+            grid-template-rows: repeat(3, auto)
+            grid-template-columns: 1fr    
+
+    &__item-title
+        grid-row: 2/3
+        grid-column: 3/5
+        max-width: 450px
+        padding-left: 50px
+        font-weight: 700
+        margin-bottom: 20px
+        & span
+            display: block
+            color: $red
+            @media screen and (max-width: 667px)
+                display: inline
+            
+
+        @media screen and (max-width: $Large)
+            font-size: 30px
+
+        @media screen and (max-width: $Medium-l)
+            max-width: 355px
+            padding-left: 20px
+
+        @media screen and (max-width: $Medium)
+            max-width: 237px
+            font-size: 20px
+
+        @media screen and (max-width: 667px)
+            grid-row: 1/2
+            grid-column: 1
+            max-width: 100%
+            font-size: 25px  
+            padding-left: 0  
+
+    &__item-image
+        grid-row: 1/6
+        grid-column: 1/3
+
+        @media screen and (max-width: 667px)
+            grid-row: 2/3
+            grid-column: 1
+
+    &__item-img
+        width: 100%
+
+    &__item-text
+        grid-row: 3/5
+        grid-column: 3/5
+        max-width: 460px
+        padding-left: 50px
+        color: $gray
+
+        @media screen and (max-width: $Medium-l)
+            font-size: 16px
+            max-width: 331px
+            padding-left: 20px
+        
+        @media screen and (max-width: $Medium)
+            max-width: 258px
+            font-size: 12px
+
+        @media screen and (max-width: 667px)
+            grid-row: 4/4
+            grid-column: 1
+            max-width: 100%
+            padding: 20px 0 0 0
+        
+/* end section houses */
+
+/* start section care */
+
     
+/* end section care */
