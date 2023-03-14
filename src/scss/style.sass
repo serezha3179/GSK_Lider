@@ -3,6 +3,7 @@
 @import header
 @import footer
 
+/* common styles*/
 body 
     position: relative
     font-family: $ptsans
@@ -21,11 +22,41 @@ body
         padding: 0 30px
 
 .title
-    font-size: $ptsans
+    font-family: $ptsans
+    font-size: 40px
     font-weight: 400
     line-height: 1.305
     color: $black
 
+    @media screen and (max-width: $Medium-l)
+        font-size: 30
+
+    @media screen and (max-width: $Medium-s)
+        font-size: 25px
+
+    @media screen and (max-width: $Small-l)
+        font-size: 20px
+
+.button_round
+    display: flex
+    max-width: 170px
+    width: 100%
+    border: none
+    background: none
+    cursor: pointer
+    outline: none
+    &-svg 
+        display: block
+        width: 100%
+        height: 100%
+        & use
+            fill: $red    
+            stroke: $red   
+            stroke-width: 2px
+            color: $black 
+/* end common styles */
+
+/* section hero */
 .hero
     position: relative
     &__wrapper
@@ -79,95 +110,90 @@ body
                 z-index: 1
 
     &__button
-        max-width: 170px
-        width: 100%
         margin-right: 0
         margin-left: auto
         z-index: 1
-        border: none
-        background: none
-        cursor: pointer
-        outline: none
 
     @media(max-width: $Medium-s)
         &__button
             width: 50%
             height: 50%
-    &__button-svg 
-        width: 100%
-        height: 100%
-        & use
-            fill: $red    
-            stroke: $red   
-            stroke-width: 2px
-            color: $black 
+            & .button_round-svg
+                & use
+                   fill: $white        //в svg stroke="none" у слова и стрелки , у круга fill="none"
+                   stroke: $white      // use class="buttonColor"
+                   stroke-width: 2px
+                   color: $white 
+/* end section hero */
 
-    @media(max-width: $Medium-s)
-        &__button-svg
-            & use
-               fill: $white        //в svg stroke="none" у слова и стрелки , у круга fill="none"
-               stroke: $white      // use class="buttonColor"
-               stroke-width: 2px
-               color: $white 
-        
-.hero__img
-    // min-height: 606px
-    // @media(max-width: 992px)
-        // min-width: 487px
-    // max-height: 606px
-    // height: 100%
-
+/* section task */        
 .tasks
     padding: 118px 0 56px
+
     @media(max-width: $Medium-l)
-        padding: 70px 0
+        padding: 70px 0 30px
         position: relative
+
     @media(max-width: $Medium-s)
-        padding: 40px 0
+        padding: 40px 0 40px
+
     @media(max-width: $Small-l)
-        padding: 70px 0
+        padding: 70px 0 20px
+
     &__title
-        font-family: $ptsans
-        font-size: 40px
-        font-weight: 700
-        line-height: 1.305
-        color: $black
         max-width: 805px
         margin-bottom: 84px
         span
             color: $red
+            font-weight: 700
+
         @media(max-width: $Medium-l)
             display: inline-block
             position: absolute
             font-size: 30px
             max-width: 600px
             margin-top: 60px
+
         @media(max-width: $Medium)
             position: static
             margin-top: 0  
+
         @media(max-width: $Medium-s)  
             font-size: 25px
             margin-bottom: 60px
+
         @media(max-width: $Small-l)  
             font-size: 20px
             margin-bottom: 40px
+
     &__cards
         display: flex
         flex-direction: row
+
         @media(max-width: $Medium-l)
             flex-wrap: wrap-reverse
             justify-content: space-between
+
         @media(max-width: $Medium)
             flex-wrap: wrap
+
     &__card
         width: 30%
         &:nth-child(4)
             margin-right: 0
             margin-left: auto
+
             @media(max-width: $Medium)
                 margin: 0
+                margin-top: 60px
+
+            @media(max-width: $Small-l)
+                margin: 0
+                margin-top: 0px
+
         @media(max-width: $Small-l)
             width: 50%
+
         @media(max-width: $Small-l)
             padding-right: 10px
             &:nth-child(1)
@@ -178,10 +204,19 @@ body
                 order: 3
             &:nth-child(4)
                 order: 2 
+
+        @media screen and (max-width: $Small-s)
+            width: 100%
+
     &__card-image
         margin-bottom: 13px
+
         @media(max-width: $Small-l) 
             max-width: 100px
+
+        @media screen and (max-width: $Small-s)
+            margin-right: auto
+            margin-left: auto
 
     &__card-text
         font-family: $ptsans
@@ -190,8 +225,145 @@ body
         line-height: 1.32
         color: $gray
         max-width: 227px
+
         @media(max-width: $Medium-l)
             margin-bottom: 60px
+
+        @media(max-width: $Medium)
+            margin-bottom: 0
+
         @media(max-width: $Small-l)    
             font-size: 14px
             margin-bottom: 20px
+
+        @media screen and (max-width: $Small-s)
+            text-align: center
+            max-width: 100%
+/* end section task */
+
+/* section services */
+.services
+    padding: 26px 0
+
+    &__title
+        margin-bottom: 10px
+
+    &__text
+        color: $red
+        margin-bottom: 40px
+
+        @media screen and (max-width: $Medium-l)
+            font-size: 16px
+
+        @media screen and (max-width: $Medium)
+            font-size: 14px
+
+        @media screen and (max-width: $Small-l)
+            font-size: 12px
+            margin-bottom: 20px
+
+    &__cards
+        display: grid
+        grid-template-rows: auto
+        grid-template-columns: repeat(3, 1fr)
+        align-items: flex-start
+        gap: 30px
+        position: relative
+
+        @media screen and (max-width: $Medium-l)
+            gap: 22px
+
+        @media screen and (max-width: 767px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: auto
+
+        @media screen and (max-width: $Small-s)
+            grid-template-columns: repeat(1, 1fr)
+        
+    &__card
+        display: block
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15)
+        cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iNDEiIHZpZXdCb3g9IjAgMCAzNCA0MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuNSAyLjY0NzUxQzAuNDk5ODUzIDIuMTczNDMgMC42MzQ1MDQgMS43MDkwOCAwLjg4ODI0OSAxLjMwODYzQzEuMTQxOTkgMC45MDgxNzggMS41MDQzNyAwLjU4ODEyNyAxLjkzMzExIDAuMzg1ODEyQzIuMzYxODUgMC4xODM0OTggMi44MzkyOCAwLjEwNzI1OCAzLjMwOTcgMC4xNjU5ODhDMy43ODAxMyAwLjIyNDcxNyA0LjIyNDE2IDAuNDE1OTk0IDQuNTkgMC43MTc1MDdMMzIuMTA1IDIzLjM3MjVDMzMuOTE1IDI0Ljg2MjUgMzIuODYgMjcuODAyNSAzMC41MTUgMjcuODAyNUgxNi41MzVDMTUuOTk3MiAyNy44MDI1IDE1LjQ2NTcgMjcuOTE4MSAxNC45NzY2IDI4LjE0MTVDMTQuNDg3NCAyOC4zNjUgMTQuMDUyMSAyOC42OTEgMTMuNyAyOS4wOTc1TDQuODkgMzkuMjhDMy4zNzUgNDEuMDMgMC41IDM5Ljk1NzUgMC41IDM3LjY0MjVWMi42NTAwMVYyLjY0NzUxWk0zMC41MTUgMjUuMzAyNUwzIDIuNjQ3NTFWMzcuNjQyNUwxMS44MSAyNy40NjI1QzEyLjM5NjYgMjYuNzg0NyAxMy4xMjIyIDI2LjI0MSAxMy45Mzc0IDI1Ljg2ODNDMTQuNzUyNyAyNS40OTU2IDE1LjYzODYgMjUuMzAyNiAxNi41MzUgMjUuMzAyNUgzMC41MTVaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K'), pointer
+
+        &:hover
+            outline: 3px solid $red
+
+        &:last-child
+            position: relative
+            grid-row: 3 / 4
+            grid-column: 2 / 4
+            box-shadow: none
+            pointer-events: none
+
+            @media screen and (max-width: 767px)
+                grid-row: 5/6
+                grid-column: 1/3
+
+            @media screen and (max-width: $Small-s)
+                grid-row: auto
+                grid-column: auto
+
+            &:hover
+                outline: none
+                
+            & .services__card-text
+                position: relative
+                font-size: 18px
+                max-width: 24em
+                margin: 20px auto
+                padding: 0
+                & p
+                    margin-bottom: 30px
+
+                @media screen and (max-width: $Medium-l)
+                    font-size: 14px
+                    & p
+                        margin-bottom: 15px
+
+                @media screen and (max-width: 767px)
+                    max-width: 100%
+                    padding-top: 10px
+                        
+                &::before
+                    content: ""
+                    position: absolute
+                    top: -30px
+                    left: -32px
+                    width: 50px
+                    height: 50px
+                    background-position: 0 0
+                    background-repeat: no-repeat
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCA0NiAzOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTUxNzUgMjYuNzE0NkM2LjIxMDkxIDI2LjA4ODYgNC4zMjg5IDI0LjQxODYgMy4zMDU2OSAyMS43MDQ3QzIuNDk5NTMgMTkuNTY2NCAyLjU0NzQ0IDE3LjU3NTggMy40NDk0MiAxNS43MzI5QzQuMzUxNCAxMy44ODk5IDUuODE2NjggMTIuNTg2MSA3Ljg0NTI2IDExLjgyMTNDOS44NzM4NCAxMS4wNTY0IDExLjgxNjMgMTEuMDU5OSAxMy42NzI4IDExLjgzMTVDMTUuNTI5MiAxMi42MDMyIDE2Ljg3MDggMTQuMDg1NSAxNy42OTc3IDE2LjI3ODZDMTguMjM1MSAxNy43MDQxIDE4LjQ1MzUgMTkuMDMwNyAxOC4zNTI4IDIwLjI1ODRMMTcuMTQ4NSAzNC4zNzkyTDkuNDI4MTQgMzQuMzMxMkw4Ljk1MTc1IDI2LjcxNDZaTTMxLjMyMSAxOC4yODFDMjguNTgwMSAxNy42NTQ5IDI2LjY5ODEgMTUuOTg0OSAyNS42NzQ5IDEzLjI3MUMyNC44Njg4IDExLjEzMjggMjQuOTE2NyA5LjE0MjE3IDI1LjgxODYgNy4yOTkyM0MyNi43MjA2IDUuNDU2MjggMjguMTg1OSA0LjE1MjQxIDMwLjIxNDUgMy4zODc1OUMzMi4yNDMxIDIuNjIyNzcgMzQuMTg1NiAyLjYyNjE5IDM2LjA0MiAzLjM5Nzg0QzM3Ljg5ODQgNC4xNjk1IDM5LjI0IDUuNjUxODYgNDAuMDY2OSA3Ljg0NDkyQzQwLjYwNDMgOS4yNzA0MSA0MC44MjI3IDEwLjU5NyA0MC43MjIgMTEuODI0OEwzOS41MTc3IDI1Ljk0NTZMMzEuNzk3NCAyNS44OTc1TDMxLjMyMSAxOC4yODFaIiBmaWxsPSIjOUMyRTI5Ii8+Cjwvc3ZnPgo=')
+                    
+                    @media screen and (max-width: $Small-l)
+                        top: -20px
+                        left: -23px
+
+    &__card-image
+        width: 100%
+
+    &__card-text
+        font-size: 20px 
+        padding: 20px 0 15px 10px
+        padding: 0.5em 0.3em 0.3em 0.5em
+        color: $black
+
+        @media screen and (max-width: $Medium-l)
+            font-size: 18px
+
+        @media screen and (max-width: 767px)
+            font-size: 14px
+
+        .card-text__link
+            color: $red  
+            text-decoration: underline  
+
+    &__button
+        position: absolute
+        bottom: -115px
+        right: 0
+        pointer-events: auto
+        @media screen and (max-width: $Small-l)
+            max-width: 150px
+/* end section services */
+    
