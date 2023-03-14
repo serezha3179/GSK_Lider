@@ -891,13 +891,11 @@ body.lock {
 }
 @media screen and (max-width: 1024px) {
   .houses__item-title {
-    max-width: 355px;
     padding-left: 20px;
   }
 }
 @media screen and (max-width: 900px) {
   .houses__item-title {
-    max-width: 237px;
     font-size: 20px;
   }
 }
@@ -905,7 +903,6 @@ body.lock {
   .houses__item-title {
     grid-row: 1/2;
     grid-column: 1;
-    max-width: 100%;
     font-size: 25px;
     padding-left: 0;
   }
@@ -954,5 +951,89 @@ body.lock {
 
 /* end section houses */
 /* start section care */
+.care {
+  padding: 20px 0;
+  background: #9C2E29;
+}
+.care__items {
+  display: flex;
+}
+@media screen and (max-width: 667px) {
+  .care__items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.care__item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+@media screen and (max-width: 667px) {
+  .care__item {
+    width: 80%;
+  }
+}
+.care__item:last-child {
+  justify-content: center;
+  padding-left: 60px;
+}
+@media screen and (max-width: 667px) {
+  .care__item:last-child {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+.care__item-title {
+  color: #ffffff;
+  margin-bottom: 23px;
+}
+@media screen and (max-width: 900px) {
+  .care__item-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+}
+.care__item-text {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.care__item-text p {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 900px) {
+  .care__item-text p {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .care__item-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+.care__item-button {
+  max-width: 233px;
+  border: 1px solid #ffffff;
+  border-radius: 35px 35px 35px 35px;
+  background: transparent;
+  color: #ffffff;
+  padding: 20px 17px;
+}
+@media screen and (max-width: 900px) {
+  .care__item-button {
+    max-width: 161px;
+    font-size: 14px;
+    padding: 10px 19px;
+  }
+}
+@media screen and (max-width: 667px) {
+  .care__item-button {
+    margin: 0 auto;
+  }
+}
+
 /* end section care */
+/* start section saving */
+/* end section saving */    
 /*# sourceMappingURL=../sourcemaps/style.css.map */

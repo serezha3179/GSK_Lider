@@ -398,17 +398,14 @@ body
             font-size: 30px
 
         @media screen and (max-width: $Medium-l)
-            max-width: 355px
             padding-left: 20px
 
         @media screen and (max-width: $Medium)
-            max-width: 237px
             font-size: 20px
 
         @media screen and (max-width: 667px)
             grid-row: 1/2
             grid-column: 1
-            max-width: 100%
             font-size: 25px  
             padding-left: 0  
 
@@ -448,6 +445,72 @@ body
 /* end section houses */
 
 /* start section care */
+.care
+    padding: 20px 0
+    background: $red
+    &__items
+        display: flex
 
-    
+        @media screen and (max-width: 667px)
+            flex-direction: column
+            align-items: center
+        
+
+    &__item
+        display: flex
+        flex-direction: column
+        width: 50%
+
+        @media screen and (max-width: 667px)
+            width: 80%
+        
+        &:last-child
+            justify-content: center
+            padding-left: 60px
+
+
+            @media screen and (max-width: 667px)
+                padding-left: 0
+                width: 100%
+
+    &__item-title
+        color: $white
+        margin-bottom: 23px
+
+        @media screen and (max-width: $Medium)
+            font-size: 25px
+            margin-bottom: 10px
+
+    &__item-text
+        color: $white
+        margin-bottom: 20px
+        & p
+            margin-bottom: 20px
+            @media screen and (max-width: $Medium)
+                margin-bottom: 10px
+
+        @media screen and (max-width: $Medium)
+            font-size: 14px
+            margin-bottom: 10px
+
+    &__item-button
+        max-width: 233px
+        border: 1px solid $white
+        border-radius: 35px 35px 35px 35px 
+        background: transparent
+        color: $white
+        padding: 20px 17px 
+
+        @media screen and (max-width: $Medium)
+            max-width: 161px
+            font-size: 14px
+            padding: 10px 19px
+
+        @media screen and (max-width: 667px)
+            margin: 0 auto
+        
 /* end section care */
+
+/* start section saving */
+
+/* end section saving */    
