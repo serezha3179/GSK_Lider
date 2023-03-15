@@ -1019,6 +1019,7 @@ body.lock {
   background: transparent;
   color: #ffffff;
   padding: 20px 17px;
+  cursor: pointer;
 }
 @media screen and (max-width: 900px) {
   .care__item-button {
@@ -1035,5 +1036,116 @@ body.lock {
 
 /* end section care */
 /* start section saving */
+.saving {
+  padding: 118px 0;
+}
+@media screen and (max-width: 768px) {
+  .saving {
+    padding: 70px 0;
+  }
+}
+.saving__title {
+  margin-bottom: 90px;
+}
+.saving__title span {
+  font-weight: 700;
+  color: #9C2E29;
+}
+@media screen and (max-width: 1024px) {
+  .saving__title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .saving__title {
+    font-size: 25px;
+  }
+}
+.saving__items {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .saving__items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.saving__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  padding: 59px 53px 17px 44px;
+  background: #ECECEC;
+}
+@media screen and (max-width: 768px) {
+  .saving__item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .saving__item:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .saving__item {
+    padding: 49px 33px 17px 24px;
+  }
+}
+.saving__item-inner {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+@media screen and (max-width: 360px) {
+  .saving__item-inner {
+    top: -20px;
+  }
+}
+.saving__item-svg {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 360px) {
+  .saving__item-svg {
+    width: 35px;
+    height: 50px;
+  }
+}
+.saving__item-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+  .saving__item-title {
+    font-size: 18px;
+  }
+}
+.saving__item-text {
+  margin-bottom: 26px;
+}
+@media screen and (max-width: 1024px) {
+  .saving__item-text {
+    font-size: 16px;
+  }
+}
+.saving__item-button {
+  text-transform: uppercase;
+  color: #9C2E29;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 /* end section saving */    
+/* start section ready */
+/* end section ready */
 /*# sourceMappingURL=../sourcemaps/style.css.map */
