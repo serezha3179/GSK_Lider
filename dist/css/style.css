@@ -1147,5 +1147,39 @@ body.lock {
 
 /* end section saving */    
 /* start section ready */
+.ready {
+  padding: 230px 0;
+  background: url("../img/ready/image1.jpg") no-repeat center center/cover;
+}
+@media screen and (max-width: 768px) {
+  .ready {
+    padding: 178px 0;
+    background-position: 40% 50%;
+    height: 433px;
+  }
+}
+.ready__title {
+  font-size: 50px;
+  font-weight: 700;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .ready__title {
+    font-size: 45px;
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ready__title {
+    font-size: 30px;
+    max-width: 320px;
+  }
+}
+
 /* end section ready */
+/* start section costs */
+/* end section costs */
 /*# sourceMappingURL=../sourcemaps/style.css.map */
