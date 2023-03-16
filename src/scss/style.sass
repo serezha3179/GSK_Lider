@@ -630,5 +630,245 @@ body
 /* end section ready */
 
 /* start section costs */
-    
+.costs
+    padding: 180px 0
+
+    @media screen and (max-width: $Medium-l)
+        padding: 117px 0
+
+    @media screen and (max-width: $Medium)
+        padding: 86px 0
+
+    @media screen and (max-width: 767px)
+        padding: 35px 0
+
+    &__items
+        display: flex
+        margin-bottom: 185px
+
+        @media screen and (max-width: 767px)
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-end
+            padding-right: 100px
+        
+        @media screen and (max-width: $Small-l)
+            padding-right: 0
+
+    &__item
+        
+        &:first-child
+            width: 58%
+            padding: 186px 0 122px 0
+            background-image: url('../img/costs/image.png')
+            background-repeat: no-repeat
+            background-position: 100% 50%
+            background-size: contain
+
+            @media screen and (max-width: $Medium-l)
+                background-size: 322px 404px
+
+            @media screen and (max-width: $Medium)
+                background-size: 221px 322px
+                padding: 133px 0 103px 0
+
+            @media screen and (max-width: 767px)
+                width: 100%
+                padding: 128px 0 103px 0
+                margin-bottom: 40px
+
+        &-text_left
+            font-size: 30px
+            font-weight: 400
+            line-height: 1.305
+            max-width: 475px
+            margin-right: 110px
+            margin-left: auto
+
+            @media screen and (max-width: $Medium-l)
+                font-size: 25px
+                max-width: 403px
+
+            @media screen and (max-width: $Medium)
+                font-size: 18px
+                max-width: 250px
+
+            @media screen and (max-width: $Small-s)
+                margin-right: 50px
+
+            @media screen and (max-width: $Small-xs)
+                margin-right: 10px
+
+        &:last-child
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            width: 42%
+            padding-left: 60px
+
+            @media screen and (max-width: $Medium)
+                padding-left: 22px
+
+            @media screen and (max-width: 767px)
+                width: 100%
+                align-items: flex-end
+
+        &-text_right 
+            max-width: 360px
+            font-size: 20px
+            color: $gray
+            margin-bottom: 32px
+
+            @media screen and (max-width: $Medium-l)
+                font-size: 16px
+
+            @media screen and (max-width: $Medium)
+                font-size: 14px
+
+            @media screen and (max-width: 767px)
+                text-align: right
+                max-width: 286px
+
+        &-button
+            font-size: 16px
+            padding: 16px 31px
+            border: none
+            text-transform: uppercase
+            color: $white
+            background-color: $red
+            cursor: pointer
+
+            @media screen and (max-width: $Medium-l)
+                font-size: 14px
+                padding: 16px 26px
+
+            @media screen and (max-width: $Medium)
+                font-size: 10px
+                padding: 13px 23px
+
+/* form start*/
+
+.form
+
+    &__title
+        font-size: 40px
+        font-weight: 400
+        line-height: 1.305
+        text-align: center
+        margin-bottom: 30px
+
+        @media screen and (max-width: $Medium-s)
+            font-size: 25px
+
+    &__input-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        max-width: 643px
+        margin: 0 auto
+
+    &__input-inner
+        display: flex
+        justify-content: space-between
+        width: 100%
+
+        & label:first-child
+            max-width: 40%
+            margin-right: 20px
+
+        & label:last-child
+            max-width: 60%
+
+    &__label
+        // display: block
+        position: relative
+        max-width: 643px
+        width: 100%
+        margin-bottom: 35px
+
+        & span
+            position: absolute
+            top: -6px
+            left: 3px
+            font-size: 20px
+            color: $gray
+
+            @media screen and (max-width: $Medium-s)
+                font-size: 18px
+
+            @media screen and (max-width: $Small-l)
+                font-size: 16px
+
+    &__label-form
+        position: static
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 20px
+        border: dotted
+
+        & .form__label-svg
+            width: 40px
+            height: 40px
+            margin-right: 10px
+
+            @media screen and (max-width: $Medium-s)
+                width: 32px
+                height: 32px
+
+            @media screen and (max-width: $Small-l)
+                width: 30px
+                height: 30px
+
+        & span
+            position: static
+            font-size: 25px
+            font-weight: 400
+            color: $black
+
+            @media screen and (max-width: $Medium-s)
+                font-size: 20px
+            
+    &__input
+        display: block
+        border: none
+        border-bottom: 1px solid $red
+        width: 100%
+
+        &:focus + span
+            top: -30px
+
+        &:focus
+            outline: none
+        
+        &-button
+            display: block
+            max-width: 270px
+            padding: 13px 48px
+            margin: 0 auto
+            text-transform: uppercase
+            color: $white
+            background: $red
+            border: none
+            cursor: pointer
+
+        &-file
+            height: 0
+            width: 0
+            border-bottom: none
+            
+    &__text
+        max-width: 434px
+        margin: 0 auto
+        margin-bottom: 20px
+        text-align: center
+
+        &-link
+            color: $red
+            text-decoration: underline
+
+/* form end*/    
+
 /* end section costs */

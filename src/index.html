@@ -170,6 +170,50 @@
           <h2 class="ready__title title">Мы готовы рассказать всё о себе</h2>
         </div>
       </section>
+      <section class="costs">
+        <div class="container">
+          <div class="costs__items">
+            <div class="costs__item">
+              <div class="costs__item-text_left">Если у вас есть техническое задание, мы можем сразу сделать просчет по стоимости и назвать примерные сроки!</div>
+            </div>
+            <div class="costs__item">
+              <div class="costs__item-text_right">ЖСК Лидер воплотит в жизнь ваши задачи. Для вашего удоства вы можете       сразу приложить имеющуюся документацию</div>
+            <button class="costs__item-button">Приложить документацию</button>
+            </div>
+          </div>
+          <form action="/" class="form">
+            <h2 class="form__title">Заказать звонок</h2>
+            <div class="form__input-wrapper">
+              <label class="form__label">
+                <input type="text" class="form__input"><span>Имя</span>
+              </label>
+              <label class="form__label">
+                <input type="phone" class="form__input form__input-phone"><span>Телефон</span>
+              </label>
+              <label class="form__label">
+                <input type="text" class="form__input"><span>Город</span>
+              </label>
+              <div class="form__input-inner">
+                <label class="form__label">
+                  <input type="text" class="form__input form__input-date"><span>Дата</span>
+                </label>
+                <label class="form__label">
+                  <input type="text" class="form__input form__input-time"><span>Время</span>
+                </label>
+              </div>
+              <label class="form__label form__label-form">
+                <input type="file" class="form__input form__input-file">
+                <svg class="form__label-svg"><use xlink:href="@img/sprite.svg#download"></use></svg>
+                <span>Прикрепить файл</span>
+              </label>
+            </div>
+            <div class="form__text"><strong>Внимание!</strong> Все поля обязательны для заполнения.
+              Отправляя форму, вы соглашаетесь с <a href="/" class="form__text-link">Политикой обработки данных</a>
+              </div>
+              <input type="button" class="form__input-button" value="Отправить заявку">
+          </form>
+        </div>
+      </section>
     </main>
     @@include('html/footer.html')
 </div>
