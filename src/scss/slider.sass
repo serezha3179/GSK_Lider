@@ -1,0 +1,45 @@
+.slider
+    position: relative
+    overflow: hidden
+
+    & .slick-list
+        overflow: hidden
+
+    & .slick-track
+        display: flex
+
+    & .slick-arrow
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 1
+        font-size: 0
+        outline: none
+        border: .5px solid $white
+
+    & .slick-prev, & .slick-next
+        position: absolute
+        width: 40px
+        height: 40px
+        background-position: center center
+        background-repeat: no-repeat
+        background: rgba(166, 166, 166, 0.2)
+        background-size: 20px 20px
+        @media screen and (max-width: $Medium-s)
+            width: 27px
+            height: 27px
+
+    & .slick-prev
+        right: 39px
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxOSIgdmlld0JveD0iMCAwIDkgMTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik04IDFMMSA5LjVMOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIvPgo8L3N2Zz4K')
+        background-position: center center
+        background-repeat: no-repeat
+
+        @media screen and (max-width: $Medium-s)
+            right: 26px
+
+    & .slick-next
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxOSIgdmlld0JveD0iMCAwIDkgMTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMOCA5LjVMMSAxOCIgc3Ryb2tlPSJ3aGl0ZSIvPgo8L3N2Zz4K')
+        background-position: center center
+        background-repeat: no-repeat
+        

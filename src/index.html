@@ -111,8 +111,16 @@
         <div class="container">
           <div class="houses__itmes">
             <h2 class="houses__item-title title">Многоквартирные <span>жилые дома</span></h2>
-            <div class="houses__item-image">
+            <div class="houses__item-image slider">
+               <div class="slider__item">
+                  <img src="@img/houses/image1.jpg" alt="houses" class="houses__item-img">
+               </div>
+               <div class="slider__item">
+                <img src="@img/houses/image1.jpg" alt="houses" class="houses__item-img">
+             </div>
+             <div class="slider__item">
               <img src="@img/houses/image1.jpg" alt="houses" class="houses__item-img">
+           </div>
             </div>
               <div class="houses__item-text">К общему имуществу дома относят помещения общего пользования всеми владельцами квартир. На основании договора, который заключается со всеми жильцами, дом обслуживается организацией или частным предпринимателем. В обязанности его входит обеспечение ремонтов, уборки придомовой территории.   </div>
           </div>
@@ -201,7 +209,7 @@
                   <input type="text" class="form__input form__input-time"><span>Время</span>
                 </label>
               </div>
-              <label class="form__label form__label-form">
+              <label class="form__label form__label-file">
                 <input type="file" class="form__input form__input-file">
                 <svg class="form__label-svg"><use xlink:href="@img/sprite.svg#download"></use></svg>
                 <span>Прикрепить файл</span>
@@ -210,7 +218,7 @@
             <div class="form__text"><strong>Внимание!</strong> Все поля обязательны для заполнения.
               Отправляя форму, вы соглашаетесь с <a href="/" class="form__text-link">Политикой обработки данных</a>
               </div>
-              <input type="button" class="form__input-button" value="Отправить заявку">
+              <input type="submit" class="form__input-button" value="Отправить заявку">
           </form>
         </div>
       </section>

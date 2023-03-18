@@ -1,7 +1,174 @@
-.footer-nav .nav__list
-    justify-content: end
+.footer
+    padding: 64px 0 40px
+    background: $footer-bg
+    &__items
+        display: grid
+        grid-template-rows: repeat(3, auto) 
+        grid-template-columns: minmax(100px, 300px) 1fr minmax(100px, 185px)
+        grid-template-areas: 'title nav schedule' 'title social schedule' 'logo logo logo'
+                             
+        @media screen and (max-width: $Medium-l)
+            grid-template-areas: 'title nav schedule' 'title nav social' 'logo logo logo'
 
-.footer-nav .nav__link
-    color: $gray
-    margin: 0 10px
-    // display: block
+        @media screen and (max-width: $Medium-s)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-areas: 'title nav' 'schedule social' 'logo logo'
+
+        @media screen and (max-width: $Small-l)
+            grid-template-rows: repeat(4, auto) 
+            grid-template-areas: 'title title' 'nav schedule' 'nav social' 'logo logo'
+
+    &__title-wrapper    
+        grid-area: title
+
+        @media screen and (max-width: $Small-l)
+            margin-bottom: 30px
+
+    &__title
+        font-size: 25px
+        font-weight: 700
+        max-width: 251px
+        margin-bottom: 13px
+        & span
+            color: $red
+
+        @media screen and (max-width: $Medium-l)
+            font-size: 20px
+
+        @media screen and (max-width: $Small)
+            font-size: 18px
+
+    &__address
+        max-width: 200px
+        font-style: normal
+
+        @media screen and (max-width: $Small-l)
+            font-size: 14px
+            max-width: 100%
+
+    &__social
+        grid-area: social
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: -50px
+
+        @media screen and (max-width: $Small-l)
+            justify-content: flex-end
+
+        &-link
+            position: relative
+            display: block
+            width: 49px
+            height: 49px
+
+            @media screen and (max-width: $Medium-s)
+                width: 44px
+                height: 44px
+
+            &:last-child img
+                margin-top: 3px
+
+            & img
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+
+    &__schedule
+        grid-area: schedule
+
+        @media screen and (max-width: $Medium-s)
+            margin-top: -15px
+
+        @media screen and (max-width: $Small-l)
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+
+        & span
+            display: block
+
+            @media screen and (max-width: $Medium-l)
+            font-size: 16px
+
+            @media screen and (max-width: $Small-l)
+            font-size: 14px
+
+    &__schedule-svg
+        width: 57px
+        height: 57px
+        margin-bottom: 10px
+
+        @media screen and (max-width: $Medium-l)
+            width: 47px
+            height: 47px
+
+    &__logo
+        grid-area: logo
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 60px
+
+        @media screen and (max-width: $Medium-l)
+            margin-top: 40px
+
+        @media screen and (max-width: $Small-l)
+            flex-direction: column
+            align-items: flex-start
+
+    &__logo-link
+        margin-right: 20px
+        max-width: 108px
+        width: 100%
+
+        @media screen and (max-width: $Small-l)
+            margin-bottom: 10px
+
+    &__text
+        font-size: 8px
+        max-width: 872px
+
+.footer-nav
+    grid-area: nav
+    margin-left: -50px
+
+    @media screen and (max-width: $Medium-l)
+        display: flex
+        justify-content: center
+
+    @media screen and (max-width: $Small-l)
+        justify-content: flex-start
+        margin-left: 0
+
+    & .nav__list
+        display: flex
+        justify-content: center
+
+        @media screen and (max-width: $Medium-l)
+            display: block
+
+        @media screen and (max-width: $Medium-s)
+            margin-left: -74px
+
+        @media screen and (max-width: $Small-l)
+            margin-left: 0
+
+    & .nav__item
+        margin: 0 17px
+
+        @media screen and (max-width: $Medium-l)
+            margin: 12px 0
+        
+        &:first-child
+            margin-top: 0
+
+    & .nav__link
+        color: $black
+
+        @media screen and (max-width: $Medium-l)
+            font-size: 16px
+
+        @media screen and (max-width: $Small)
+            font-size: 14px

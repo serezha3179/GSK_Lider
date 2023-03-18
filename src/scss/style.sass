@@ -1,6 +1,7 @@
 @import reset
 @import variables
 @import header
+@import slider
 @import footer
 
 /* common styles*/
@@ -11,7 +12,8 @@ body
     font-weight: 400
     line-height: 1.305
     color: $black
-    &.lock
+
+    &.js-lock
         overflow: hidden
 
 .container 
@@ -419,7 +421,7 @@ body
 
     &__item-img
         width: 100%
-
+        
     &__item-text
         grid-row: 3/5
         grid-column: 3/5
@@ -801,7 +803,11 @@ body
             @media screen and (max-width: $Small-l)
                 font-size: 16px
 
-    &__label-form
+        &.active
+            & span
+                top: -30px
+
+    &__label-file
         position: static
         display: flex
         justify-content: center
@@ -837,7 +843,7 @@ body
         border-bottom: 1px solid $red
         width: 100%
 
-        &:focus + span
+        &:focus ~ span
             top: -30px
 
         &:focus

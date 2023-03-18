@@ -20,23 +20,32 @@
             padding: 0
 
 .header__logo
-    width: 175px
-    height: 95px
+    max-width: 175px
+    width: 100%
+    // height: 95px
 
     @media(max-width: 1000px)
-        width: 112px
-        height: 61px
+        max-width: 112px
+        width: 100%
+        // height: 61px
 
 .header-nav
-    margin: 0 auto
+    // margin: 0 auto
     display: flex
 
+    @media screen and (min-width: 767px)
+        margin: 0 auto
+    
     &__close
         display: none
 
     & .nav__list
         display: flex
         align-items: center
+
+        @media screen and (max-width: $Medium-s)
+            display: none
+        
 
     & .nav__item
         @media(min-width: 767px)
@@ -85,7 +94,7 @@
             align-items: flex-end
 
     @media(max-width: 767px)
-        display: none
+        // display: none
 
     & .nav__item:nth-child(2) 
         @media(min-width: 767px)
@@ -105,13 +114,15 @@
                     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDE0IDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA0TDEzIDEiIHN0cm9rZT0iYmxhY2siLz4KPC9zdmc+Cg==')
                     width: 12px
                     height: 5px   
-.header_open
+.js-header_open
     & .header-nav
         @media(max-width: 767px)
-            display: flex
-            padding: 50px
-            flex-direction: column
-            align-items: flex-end
+            // display: flex
+            padding: 50px 35px 20px 50px
+            display: block
+            // padding: 50px
+            // flex-direction: column
+            // align-items: flex-end
             position: fixed
             top: 0
             left: 0
@@ -120,10 +131,12 @@
             background: rgba(0, 0, 0, 0.84)
             color: #ffffff
             z-index: 10
+            overflow: scroll
 
     & .nav__list
         align-items: flex-end
         @media(max-width: 767px)
+            display: flex
             flex-direction: column
             padding-right: 22px
 
@@ -141,26 +154,79 @@
                     display: block
                     position: absolute
                     top: 50%
+                    transform: translateY(-45%)
                     right: -30px
-                    width: 12px
-                    height: 5px
-            & svg.active
+                    width: 32px
+                    height: 25px
+                    padding: 8px
+                    cursor: pointer
+                    transition: all .3s
+
+            & svg.is-active
                     transform: rotate(180deg)
+                    top: 0
     & .nav__link
         @media(max-width: 767px)
             color: $white
             margin: 0
 
-    & .header-nav__close
-        display: none
-        @media(max-width: 767px)
-            display: block
-            width: 43px
-            height: 43px
-            margin-bottom: 35px
-            &-img
-                width: 100%
-                height: 100%
+    // & .header-nav__close
+    //     display: none
+    //     @media(max-width: 767px)
+    //         display: block
+    //         width: 43px
+    //         height: 43px
+    //         margin-bottom: 35px
+    //         &-img
+    //             width: 100%
+    //             height: 100%
+
+    & .header__burger
+        z-index: 10
+        margin: 0 0 20px auto
+        &:after
+            transform: scale(0)
+
+        &:before
+            transform: rotate(44deg) translate(11px, 11px)
+            // transform: rotate(404deg) translate(11px, 11px)
+            background: $white
+
+        & span
+            // transform: rotate(314deg) translate(0px, 1px)
+            transform: rotate(-46deg) translate(0px, 1px)
+            background: $white
+    
+.header__burger
+    position: relative
+    display: none
+    width: 38.5px
+    height: 33px
+    cursor: pointer
+
+    & span, &:before, &:after
+        display: block
+        width: 100%
+        height: 3px
+        background: $red
+        transition: all .5s
+
+    &:before, &:after
+        content: ''
+        position: absolute
+
+    &:before
+        top: 0
+
+    &:after
+        bottom: 0
+        width: 60%
+        right: 0
+
+@media(max-width: 767px)
+    .header__burger
+        display: flex
+        align-items: center   
 
 .nav-item__wrapper
     position: absolute
@@ -177,7 +243,6 @@
     z-index: 2
     margin: 10px 50px 0 10px
     overflow: hidden
-    transition: all .2s
 
     &:hover
         display: grid
@@ -197,7 +262,8 @@
         background: none
         margin: 0
         padding: 0
-        height: 0
+        max-height: 0
+        transition: all .3s
 
         & .nav-item__link
             margin: 0 
@@ -217,9 +283,11 @@
                 position: static
                 background: none
                 margin: 0
-                padding: 0   
+                padding: 0 
+
 .nav-item__link
     color: $gray
+    
 .nav-item__link
     & svg
         display: block
@@ -239,17 +307,6 @@
 .nav-item__link:nth-child(6) .nav-item__link-text
     max-width: 142px
 
-.header__burger
-    display: none
-    width: 38.5px
-    height: 33px
-    cursor: pointer
-@media(max-width: 767px)
-    .header__burger
-        display: block   
-.header__burger-svg
-    width: 100%
-    height: 100%
 @media(max-width: 992px)
     .header__contacts
         position: absolute
@@ -262,11 +319,13 @@
         padding: 6px 0
         width: 100%
         background: rgba(247, 246, 245, 1)
+
 .header__contacts
     & span
         font-family: $ptsans
         font-size: 16px
         margin-right: 17px
         border-bottom: 1px dashed $red
+
 .header__contacts-link
     color: $red
